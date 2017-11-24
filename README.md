@@ -3,13 +3,13 @@
 Initial Settings to be done to SIM5320E before connecting to Teensy 3.2 or any microcontroller
 
 **Step 1:**
->a) Start CoolTerm
+1. Start CoolTerm
 
->b) Set baud rate to 115200 (Under “Options->Serial Port Options-> Baudrate:”)
+2. Set baud rate to 115200 (Under “Options->Serial Port Options-> Baudrate:”)
 
->c) Set terminal mode to “Line Mode” (Under “Options->Terminal Options-> Terminal Mode:”)
+3. Set terminal mode to “Line Mode” (Under “Options->Terminal Options-> Terminal Mode:”)
 
->d) Click “Connect”
+4. Click “Connect”
 
 **Step 2:**
 Wait for initial boot messages from SIM3520E.
@@ -37,7 +37,7 @@ PB DONE
 **Step 3**:
 Set baud rate permanently using AT+IPREX
 ```
-Send:	AT+IPREX=9600
+Send :	AT+IPREX=9600
 Reply:	OK
 ```
 **Step 4:**
@@ -46,36 +46,37 @@ Change baud rate to 9600 (Under “Options->Serial Port Options-> Baudrate:”)
 **Step 5:**
 Start GPS automatically upon next boot up of SIM5320E (AT+CGPSAUTO)
 ```
-Send: 	AT+CGPSAUTO=1
+Send : 	AT+CGPSAUTO=1
 Reply: 	OK
 ```
 **Step 6:**
 Enable automatic time and time zone via NITZ (AT+CTZU)
 ```
-Send:	AT+CTZU=1
+Send :	AT+CTZU=1
 Reply:	OK
 ```
 Step 7:
->a) Click “Disconnect”
+1. Click “Disconnect”
 
->b) Click “Clear Data”
+2. Click “Clear Data”
 
->c) Unplug USB cable
+3. Unplug USB cable
 
->d) Plug USB cable
+4. Plug USB cable
 
->e) Click “Connect”
+5. Click “Connect”
 
->f) Wait for initial boot messages (same as Step 2) from SIM3520E
+6. Wait for initial boot messages (same as Step 2) from SIM3520E
 
 **Step 8:**
 Check if settings remain permanent
 ```
-Send: 	AT+CGPSAUTO?
+Send : 	AT+CGPSAUTO?
 Reply: 	+CGPSAUTO:1
 	
 	OK
-Send: 	AT+CTZU?
+	
+Send : 	AT+CTZU?
 Reply: 	+CTZU: 1
 	
 	OK
@@ -83,18 +84,18 @@ Reply: 	+CTZU: 1
 **Step 9:**
 Check Real Time Clock (AT+CCLK)
 ```
-Send:	AT+CCLK?
+Send :	AT+CCLK?
 Reply:	+CCLK: "yy/MM/dd,hh:mm:ss±zz"
 
-OK
+	OK
 ```
 **Step 10:**
 Stop GPS session (AT+CGPS)
 ```	
-Send:	AT+CGPS=0
+Send :	AT+CGPS=0
 Reply:	OK
 
-+CGPS: 0 (Wait for 35 seconds)
+	+CGPS: 0 (Wait for 35 seconds)
 ```
 **Step 10:**
 Cold start GPS session (AT+CGPSCOLD)
@@ -103,14 +104,14 @@ Send:	AT+CGPSCOLD
 Reply:	OK
 ```
 **Step 11:**
->a) Wait for 120 seconds
+1. Wait for 120 seconds
 
->b) Get GPS fixed position information (AT+CGPSINFO)
+2. Get GPS fixed position information (AT+CGPSINFO)
 ```
-Send:	AT+CGPSCOLD
+Send :	AT+CGPSCOLD
 Reply:	+CGPSINFO: [<lat>],[<N/S>],[<log>],[<E/W>],[<date>],[<UTC time>],[<alt>],[<speed>],[<course>]
 
-AmpI/AmpQ: <AmpI>/<AmpQ>
+	AmpI/AmpQ: <AmpI>/<AmpQ>
 
-OK
+	OK
 ```

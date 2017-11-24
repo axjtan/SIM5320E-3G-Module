@@ -14,7 +14,7 @@ Initial Settings to be done to SIM5320E before connecting to Teensy 3.2 or any m
 **Step 2:**
 Wait for initial boot messages from SIM3520E.
 
-**Info:** About 15 secs will appear below messages
+**Info:** Below messages will appear after 15 seconds
 ```
 START
 
@@ -28,7 +28,7 @@ SMS DONE
 
 PB DONE
 ```
-**Info:** About additional 55 secs will appear below message
+**Info:** Below message will appear after 55 seconds
 
 (Total waiting time: 70 secs = 15 + 55)
 ```
@@ -94,8 +94,10 @@ Stop GPS session (AT+CGPS)
 ```	
 Send :	AT+CGPS=0
 Reply:	OK
-
-	+CGPS: 0 (Wait for 35 seconds)
+```
+Below message will appear after 35 seconds
+```
+	+CGPS: 0
 ```
 **Step 10:**
 Cold start GPS session (AT+CGPSCOLD)

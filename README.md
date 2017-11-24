@@ -55,7 +55,7 @@ Enable automatic time and time zone via NITZ (AT+CTZU)
 Send :	AT+CTZU=1
 Reply:	OK
 ```
-Step 7:
+**Step 7:**
 1. Click “Disconnect”
 
 2. Click “Clear Data”
@@ -95,7 +95,7 @@ Stop GPS session (AT+CGPS)
 Send :	AT+CGPS=0
 Reply:	OK
 ```
-Below message will appear after 35 seconds
+**Info:** Below message will appear after 35 seconds
 ```
 	+CGPS: 0
 ```

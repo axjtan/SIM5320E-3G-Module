@@ -1,15 +1,21 @@
 # SIM5320E-3G-Module
-Library to use for SIM5320E 3G Module
+
 Initial Settings to be done to SIM5320E before connecting to Teensy 3.2 or any microcontroller
 
-Step 1: 	a) Start CoolTerm
-b) Set baud rate to 115200 (Under “Options->Serial Port Options-> Baudrate:”)
-c) Set terminal mode to “Line Mode” (Under “Options->Terminal Options-> Terminal Mode:”)
-d) Click “Connect”
+**Step 1:**
+>a) Start CoolTerm
 
-Step 2: 	Wait for initial boot messages from SIM3520E
+>b) Set baud rate to 115200 (Under “Options->Serial Port Options-> Baudrate:”)
+
+>c) Set terminal mode to “Line Mode” (Under “Options->Terminal Options-> Terminal Mode:”)
+
+>d) Click “Connect”
+
+**Step 2:**
+Wait for initial boot messages from SIM3520E.
 
 Info: About 15 secs will appear below messages
+```
 START
 
 +STIN: 25
@@ -21,7 +27,7 @@ START
 SMS DONE
 
 PB DONE
-
+```
 Info: About additional 55 secs will appear below message
 (Total waiting time: 70 secs = 15 + 55)
 

@@ -18,8 +18,8 @@ HardwareSerial  &hws_SIM5320E_Serial  = Serial1;
 ATCommand       AT;
 
 String          str_SIM5320E_Response;
-boolean         b_PrintShortResponse  = YES;
-boolean         b_EchoMode            = NO;
+boolean         b_PrintShortResponse  = NO;
+boolean         b_EchoMode            = YES;
 
 String          str_Timestamp;
 

@@ -21,6 +21,9 @@ SMS DONE       -> Detects SMS memory (AT Commands for SMS)
 Wait for ~12 seconds upon power up of SIM5320E before message 'PB Done' appears
 ```
 PB DONE        -> Detects PhoneBook memory (AT Commands for Phonebook)
+```
+Test AT connectivity (AT) and Setting Echo Mode (ATE)
+```
 AT
 OK
 ATE1
@@ -29,13 +32,14 @@ OK
 Wait for ~65 seconds upon power up of SIM5320 before message '+STIN: 25' appears
 ```
 +STIN: 25 -> Notification that SIM Application has returned to main menu.
+```
+**AT+CPSI - Read the UE system information on a 3G cell**
+```
 AT+CPSI?
 +CPSI: System Mode,Operation Mode,MCC-MNC,LAC,Cell ID,Frequency Band,PSC,Freq,SCC,Ec/Io,RSCP,Qual,RxLev,TXPWR
 
 OK
 ```
-**AT+CPSI - Read the UE system information on a 3G cell**
-
 + System Mode   : 'NO SERVICE', 'GSM', 'WCDMA'
 + Operation Mode: 'Online', 'Offline', 'Factory Test Mode', 'Reset', 'Low Power Mode'
 + MCC           : Mobile Country Code (first part of PLMN code)

@@ -21,8 +21,6 @@ String          str_SIM5320E_Response;
 boolean         b_PrintShortResponse  = NO;
 boolean         b_EchoMode            = YES;
 
-String          str_Timestamp;
-
 uint8_t         ui8_AdditionalLength  = 0;
 
 void setup() {

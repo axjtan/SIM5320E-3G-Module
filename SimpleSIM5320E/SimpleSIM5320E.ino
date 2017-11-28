@@ -76,8 +76,6 @@ void InitSIM5320E (void)
   AT.CPSI("?");
   
   /*  Response received:
-   *  +CPSI: WCDMA      ,Online        ,525-01 ,0x0152,20190399,WCDMA IMT 2000,14 ,
-   *  10812,0  ,6.5  ,64  ,27  ,35   ,500
    *  +CPSI: System Mode,Operation Mode,MCC-MNC,LAC   ,Cell ID ,Frequency Band,PSC,
    *  Freq ,SCC,Ec/Io,RSCP,Qual,RxLev,TXPWR
    *  

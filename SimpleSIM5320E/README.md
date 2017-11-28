@@ -22,24 +22,26 @@ OK
 Wait for ~65 seconds upon power up of SIM5320 before message '+STIN: 25' appears
 ```
 +STIN: 25 -> Notification that SIM Application has returned to main menu.
-
+```
+AT+CPSI?
+```
 +CPSI: System Mode,Operation Mode,MCC-MNC,LAC,Cell ID,Frequency Band,PSC,Freq,SCC,Ec/Io,RSCP,Qual,RxLev,TXPWR
 OK
 ```
-**AT+CPSI?**
+**AT+CPSI**
 
- 1.System Mode   : 'NO SERVICE', 'GSM', 'WCDMA'
- 2.Operation Mode: 'Online', 'Offline', 'Factory Test Mode', 'Reset', 'Low Power Mode'
- 3.MCC           : Mobile Country Code (first part of PLMN code)
- 4.MNC           : Mobile Network Code (second part of PLMN code)
- 5.LAC           : Location Area Code (hexadecimal digits)
- 6.Cell ID       : Service-cell ID
- 7.Frequency Band: Frequency Band of active set
- 8.PSC           : Primary synchronization code of active set
- 9.Freq          : Downlink frequency of active set
-10.SSC           : Secondary synchronization code of active set
-11.EC/IO         : Ec/Io value
-12.RSCP          : Received Signal Code Power
-13.Qual          : Quality value for base station selection
-14.RxLev         : RX level value for base station selection
-15.TXPWR         : UE TX power in dBm. If no TX, the value is 500
++ System Mode   : 'NO SERVICE', 'GSM', 'WCDMA'
++ Operation Mode: 'Online', 'Offline', 'Factory Test Mode', 'Reset', 'Low Power Mode'
++ MCC           : Mobile Country Code (first part of PLMN code)
++ MNC           : Mobile Network Code (second part of PLMN code)
++ LAC           : Location Area Code (hexadecimal digits)
++ Cell ID       : Service-cell ID
++ Frequency Band: Frequency Band of active set
++ PSC           : Primary synchronization code of active set
++ Freq          : Downlink frequency of active set
++ SSC           : Secondary synchronization code of active set
++ EC/IO         : Ec/Io value
++ RSCP          : Received Signal Code Power
++ Qual          : Quality value for base station selection
++ RxLev         : RX level value for base station selection
++ TXPWR         : UE TX power in dBm. If no TX, the value is 500

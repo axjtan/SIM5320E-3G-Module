@@ -1,8 +1,8 @@
 ## SimpleSIM5320E
 
 Setting to variable b_PrintShortResponse and b_EchoMode
-b_PrintShortResponse  = NO
-b_EchoMode            = YES
++ b_PrintShortResponse  = NO
++ b_EchoMode            = YES
 
 Messages appearing on Terminal:
 ```

@@ -1,4 +1,10 @@
 ## SimpleSIM5320E
+
+Setting to variable b_PrintShortResponse and b_EchoMode
+b_PrintShortResponse  = NO
+b_EchoMode            = YES
+
+Messages appearing on Terminal:
 ```
 Set up done
 
@@ -15,21 +21,20 @@ SMS DONE       -> Detects SMS memory (AT Commands for SMS)
 Wait for ~12 seconds upon power up of SIM5320E before message 'PB Done' appears
 ```
 PB DONE        -> Detects PhoneBook memory (AT Commands for Phonebook)
-
+AT
 OK
-
+ATE1
 OK
 ```
 Wait for ~65 seconds upon power up of SIM5320 before message '+STIN: 25' appears
 ```
 +STIN: 25 -> Notification that SIM Application has returned to main menu.
-```
 AT+CPSI?
-```
 +CPSI: System Mode,Operation Mode,MCC-MNC,LAC,Cell ID,Frequency Band,PSC,Freq,SCC,Ec/Io,RSCP,Qual,RxLev,TXPWR
+
 OK
 ```
-**AT+CPSI**
+**AT+CPSI - Read the UE system information on a 3G cell**
 
 + System Mode   : 'NO SERVICE', 'GSM', 'WCDMA'
 + Operation Mode: 'Online', 'Offline', 'Factory Test Mode', 'Reset', 'Low Power Mode'

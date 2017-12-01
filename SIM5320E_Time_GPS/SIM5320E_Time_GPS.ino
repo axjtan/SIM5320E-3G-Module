@@ -95,7 +95,7 @@ void InitSIM5320E (void)
    *  Freq,SCC,Ec/Io,RSCP,Qual,RxLev,TXPWR 
    */
   str_SIM5320E_Response = AT.ReceivedResponse("OK", b_PrintShortResponse);
-  // Getting MCC-MNC, 525-01 is Singtel
+  // Getting MCC-MNC
   ui8_AdditionalLength = GetAddtionalLengthDueToEchoOnOff(b_EchoMode, str_SIM5320E_Response, '?');
   COM.println(str_SIM5320E_Response.substring(ui8_AdditionalLength+22,ui8_AdditionalLength+28));
 }

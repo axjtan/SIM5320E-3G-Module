@@ -148,13 +148,14 @@ String ATCommand::ReceivedResponse (String str_ExpectedResponse, boolean b_ToPri
 
     for (uint16_t ui16_index=0; ui16_index<str_ATCommandResponse.length(); ui16_index++)
     {
-        //COM.print(str_ATCommandResponse[ui16_index]);
-        if(str_ATCommandResponse[ui16_index]== str_ExpectedResponse[0] && str_ATCommandResponse[ui16_index+1]==str_ExpectedResponse[1])
-        {
-          if(b_ToPrintResponse == YES)
-            COM.println(str_ExpectedResponse);
-          b_RRFlag = true;
-        }
+      if(b_ToPrintResponse == NO)
+        COM.print(str_ATCommandResponse[ui16_index]);
+      if(str_ATCommandResponse[ui16_index]== str_ExpectedResponse[0] && str_ATCommandResponse[ui16_index+1]==str_ExpectedResponse[1])
+      {
+        if(b_ToPrintResponse == YES)
+          COM.println(str_ExpectedResponse);
+        b_RRFlag = true;
+      }
     }
   }
   return str_ATCommandResponse;
